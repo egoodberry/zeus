@@ -36,6 +36,12 @@ Q: "I should put it in my `Gemfile`, right?"
 
 A: No. You can, but running `bundle exec zeus` instead of `zeus` adds precious seconds to commands that otherwise would be quite a bit faster. Zeus was built to be run from outside of bundler.
 
+There is a default Zeus configuration. To override, you can generate your own configuration files with:
+
+```
+zeus init
+```
+
 #### IMPORTANT
 
 It is common to see tests running twice when starting out with Zeus. If you see your tests/specs running twice, you should try disabling `require 'rspec/autotest'` and `require 'rspec/autorun'` (for RSpec), or `require 'minitest/autorun'` (for Minitest). (see [#134](https://github.com/burke/zeus/issues/134) for more information).
